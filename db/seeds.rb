@@ -20,14 +20,27 @@ require "csv"
 #     numOfPages: book["num_pages"]
 #   )
 # end
-csv_file = Rails.root.join('db/Book7.csv')
-csv_data = File.read(csv_file)
-publishers = CSV.parse(csv_data, headers: true)
+
+# insert publisher
+# csv_file = Rails.root.join('db/Book7.csv')
+# csv_data = File.read(csv_file)
+# publishers = CSV.parse(csv_data, headers: true)
+# publishers.each do |publisher|
+#   puts publisher["publisher"]
+#   Publisher.create(
+#     name: publisher["publisher"]
+#   )
+# end
+
+# insert rate
+# csv_file = Rails.root.join('db/Book8.csv')
+# csv_data = File.read(csv_file)
+# rates = CSV.parse(csv_data, headers: true)
 
 
-publishers.each do |publisher|
-  puts publisher["publisher"]
-  Publisher.create(
-    name: publisher["publisher"]
-  )
-end
+# rates.each do |rate|
+#   Rate.create(
+#     rate: rate["arating"].to_f,
+#     book_id: rate["bookID"].to_i
+#   )
+# end
