@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "csv"
+require 'date' 
 # import book data
 # csv_file = Rails.root.join('db/BookData.csv')
 # csv_data = File.read(csv_file)
@@ -44,3 +45,17 @@ require "csv"
 #     book_id: rate["bookID"].to_i
 #   )
 # end
+
+# insert public
+csv_file = Rails.root.join('db/Book8.csv')
+csv_data = File.read(csv_file)
+publishes = CSV.parse(csv_data, headers: true)
+
+
+publishes.each do |publicsa|
+  Publish.create(
+    PublishDate: Date.strptime(publicsa["publication_date"], '%m/%d/%Y'),
+    publisher_id: publicsa["bookID"].to_i,
+    book_id: publicsa["bookID"].to_i,
+  )
+end
