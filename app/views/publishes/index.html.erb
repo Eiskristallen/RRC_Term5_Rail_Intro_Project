@@ -5,7 +5,13 @@
 <ul>
   <% @publishes.each do |publish| %>
     <li>
-      <%= publish.publishDate %>
+      publish Date:<%= publish.publishDate %>
+        </li>
+    <li>  
+      Book name:<%= publish.book.title %>
+        </li>
+    <li>  
+      Publisher:<%= publish.publisher.name %>
     </li>
   <% end %>
 </ul>

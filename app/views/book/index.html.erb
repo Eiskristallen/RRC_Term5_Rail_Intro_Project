@@ -5,7 +5,10 @@
 <ul>
   <% @books.each do |book| %>
     <li>
-      <%= book.title %>
-    </li>
+      <%= link_to book.title,book %> was published by 
+        <% book.publishes.each do |publish| %>
+       <%= link_to publish.publisher.name, publish.publisher %> 
+      <% end %>
+    </li> 
   <% end %>
 </ul>
