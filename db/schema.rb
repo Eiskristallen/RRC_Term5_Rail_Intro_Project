@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_10_24_013305) do
   end
 
   create_table "publishes", force: :cascade do |t|
-    t.date "PublishDate"
+    t.date "publishDate"
     t.integer "publisher_id", null: false
     t.integer "book_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -1,16 +1,11 @@
 <h1>Book#index</h1>
 <p>Find me in app/views/book/index.html.erb</p>
-<h1>Books</h1>
+<h1>publishes</h1>
 
 <ul>
-  <% @books.each do |book| %>
+  <% @publishes.each do |publish| %>
     <li>
-      <%= book.title %>
-    </li>
-  <% end %>
-    <% @rates.each do |rate| %>
-    <li>
-      <%= rate.rate %>
+      <%= publish.publishDate %>
     </li>
   <% end %>
 </ul>
