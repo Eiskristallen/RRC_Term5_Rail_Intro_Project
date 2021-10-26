@@ -1,9 +1,24 @@
-<h1>Show Book</h1>
-<ul>
- <li>
-    <%= @book.title %>
- </li>
-  <li>
-   Rating:<%= @book.rate.rate %>
- </li>
- </ul>
+<h2 class="title is-2"><%=@book.title%></h2>
+
+<p>
+<strong>Author:</strong>
+<%= @book.author %> 
+</p>
+<p>
+<strong>Publishers:</strong>
+        <% @book.publishes.each do |publish| %>
+       <%= link_to publish.publisher.name, publish.publisher %> 
+      <% end %>
+</p>
+Rate:
+ <progress class="progress is-info" value="<%= @book.rate.rate%>" max="5">
+ </progress>
+ <%= @book.rate.rate%>/5
+<p>
+<strong>ISBN:</strong>
+<%= @book.ISBN %> 
+</p>
+<p>
+<strong>Pages:</strong>
+<%= @book.numOfPages %> 
+</p>
