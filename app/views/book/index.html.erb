@@ -7,8 +7,6 @@
         <% book.publishes.each do |publish| %>
        <%= link_to publish.publisher.name, publish.publisher %> 
       <% end %>
-    </li>
-    <li>
       ISBN: <%= book.ISBN%>
     </li> 
   <% end %>
