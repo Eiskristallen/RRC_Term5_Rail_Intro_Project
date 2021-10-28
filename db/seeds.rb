@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "csv"
 require 'date' 
+# Page.delete_all
 # import book data
 # csv_file = Rails.root.join('db/BookData.csv')
 # csv_data = File.read(csv_file)
@@ -59,4 +60,13 @@ require 'date'
 #     book_id: publicsa["bookID"].to_i,
 #   )
 # end
-
+Page.create(
+  title:'Contact us',
+  content:'asdasfdsgdsfgdfsfghfgfhfgh',
+  permalink:'contact'
+)
+Page.create(
+  title:'About the books',
+  content:'asdasfdsgdsfgdfsfghfgfhfgh',
+  permalink:'about_books'
+)
