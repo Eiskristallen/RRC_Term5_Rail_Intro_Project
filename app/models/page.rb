@@ -1,3 +1,4 @@
 class Page < ApplicationRecord
-  validate :title,:content,:permalink,presence: true
+  validates :title,:content,:permalink,presence: true
+  validates :permalink,uniqueness: true
 end
