@@ -1,6 +1,10 @@
-<h1> <%= @publisher.name %></h1>
-<ul>
- <li>
-    <%= @publisher.name %>
- </li>
+<h1 class="title is-2"> <%= @publisher.name %></h1>
+<p class="mb-5">
+ this Publisher published <%= @publisher.publishes.count%> Book/Books
+</p>
+ <h3 class="title is-3">Books published by <%=@publisher.name%></h3>
+ <ul>
+ <%@publisher.publishes.each do |publish|%>
+  <li><%= link_to publish.book.title, publish.book%> with rating of <%= publish.book.rate.rate%> /10</li>
+  <%end%>
  </ul>

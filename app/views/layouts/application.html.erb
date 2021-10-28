@@ -16,6 +16,11 @@
      <h1 class="title is-1"><%=link_to 'Book recommondation',root_path%></h1>
     </div>
     <%= yield %>
+    <%if controller_name == 'home'%>
+    <p>you are at home</p>
+    <%else%>
+    <%= render partial:'common/foot'%>
+    <% end %>
     </section>
   </body>
 </html>

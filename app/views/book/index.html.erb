@@ -1,14 +1,19 @@
 
 <h2 class="title is-2">Books</h2>
+<div class="columns">
+  <div class="column">
 <ol>
   <% @books.each do |book| %>
     <li>
-      <%= link_to book.title,book %> was published by 
-        <% book.publishes.each do |publish| %>
-       <%= link_to publish.publisher.name, publish.publisher %> 
+      <%= link_to book.title,book %> 
+      <% book.publishes.each do |publish| %>
+      <p>-Publisher:  <%= link_to publish.publisher.name, publish.publisher %></p>
+      <p>-ISBN: <%= book.ISBN%></p>
+      <p>-Date of Published: <%= publish.publishDate%></p>
       <% end %>
-      ISBN: <%= book.ISBN%>
+
     </li> 
   <% end %>
-  
 </ol>
+  </div>
+</div>
