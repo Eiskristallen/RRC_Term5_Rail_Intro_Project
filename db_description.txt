@@ -1,0 +1,10 @@
+in this project I have five tables in total.
+the first one is books with can has many comments and exactly one rate for each book
+the second one is publisher. it contains information for a publisher. one publisher can publish many books and one book
+  can be published by different publisher
+  it has beed tied with books table through publish table
+third one is rate which contain a rate for a book
+the fourth one is publish. it is a join table between book and publisher in order to maintain the many to many relationship
+  between them
+the last one is comments. it's tied to books. each book can have multiple comments and one comment can only belong to 
+  a single book

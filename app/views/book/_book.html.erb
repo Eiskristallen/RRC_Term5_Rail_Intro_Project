@@ -10,9 +10,9 @@
       <% end %>
 </p>
 Rate:
- <progress class="progress is-info" value="<%= book.rate.rate%>" max="5">
+ <progress class="progress is-info" value="<%= book.rate.rate%>" max="10">
  </progress>
- <%= book.rate.rate%>/5
+ <%= book.rate.rate%>/10
 <p>
 <strong>ISBN:</strong>
 <%= book.ISBN %> 
@@ -21,3 +21,20 @@ Rate:
 <strong>Pages:</strong>
 <%= book.numOfPages %> 
 </p>
+    <%if book.rate.rate >=8%>
+    <strong>I strongly recommand you to read it</strong>
+    <%else%>
+    <p>it's quit normal book</p>
+    <% end %>
+
+     <%if not_exists?(book.id) %>
+     <ul>
+     <strong>Comments of the book:</strong>
+        <% book.comments.each do |comment| %>
+      <li> Commenter:<%= comment.commenter %> </li>
+      <li> <%=comment.body %> </li>
+      <% end %>
+     </ul>
+    <%else%>
+    <p>no comments of this book yet!</p>
+    <% end %>

@@ -3,6 +3,7 @@
 <div class="columns">
   <div class="column">
 <ol>
+<%= will_paginate @books %> 
   <% @books.each do |book| %>
     <li>
       <%= link_to book.title,book %> 
@@ -14,6 +15,7 @@
 
     </li> 
   <% end %>
+  <%= will_paginate @books %>
 </ol>
   </div>
 </div>

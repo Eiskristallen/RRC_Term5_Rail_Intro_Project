@@ -60,13 +60,56 @@ require 'date'
 #     book_id: publicsa["bookID"].to_i,
 #   )
 # end
-Page.create(
-  title:'Contact us',
-  content:'asdasfdsgdsfgdfsfghfgfhfgh',
-  permalink:'contact'
-)
-Page.create(
-  title:'About the books',
-  content:'asdasfdsgdsfgdfsfghfgfhfgh',
-  permalink:'about_books'
-)
+# Page.create(
+#   title:'Contact us',
+#   content:'asdasfdsgdsfgdfsfghfgfhfgh',
+#   permalink:'contact'
+# )
+# Page.create(
+#   title:'About the books',
+#   content:'asdasfdsgdsfgdfsfghfgfhfgh',
+#   permalink:'about_books'
+# )
+# Book.create(
+#   title:"my_book2",
+#   ISBN:"33333",
+#   numOfPages:211,
+#   author:"Qingbei",
+# )
+# Book.create(
+#   title:"my_book3",
+#   ISBN:"4444",
+#   numOfPages:211,
+#   author:"Qingbei",
+# )
+  # Publish.create(
+  #   publishDate: Date.strptime('8/1/2021','%m/%d/%Y'),
+  #   publisher_id: 1,
+  #   book_id: 200,
+  # )
+  # Publish.create(
+  #   publishDate: Date.strptime('9/1/2021','%m/%d/%Y'),
+  #   publisher_id: 2,
+  #   book_id: 200,
+  # )
+  # Publish.create(
+  #   publishDate: Date.strptime('10/1/2021','%m/%d/%Y'),
+  #   publisher_id: 3,
+  #   book_id: 200,
+  # )
+
+  # Comment.create(
+  #   commenter:"commenter1",
+  #   body:"good one",
+  #   book_id:1
+  # )
+  # Comment.create(
+  #   commenter:"commenter2",
+  #   body:"good two",
+  #   book_id:1
+  # )
+  # Comment.create(
+  #   commenter:"commenter3",
+  #   body:"good three",
+  #   book_id:1
+  # )

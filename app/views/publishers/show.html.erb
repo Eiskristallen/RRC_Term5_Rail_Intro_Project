@@ -5,6 +5,6 @@
  <h3 class="title is-3">Books published by <%=@publisher.name%></h3>
  <ul>
  <%@publisher.publishes.each do |publish|%>
-  <li><%= link_to publish.book.title, publish.book%> with rating of <%= publish.book.rate.rate%> /10</li>
+     <li><%= link_to publish.book.title, publish.book%> with rating of <%= publish.book.rate.rate%> /10</li>
   <%end%>
  </ul>
